@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		046EA8441E07CDF4009A21CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA8431E07CDF4009A21CD /* AppDelegate.swift */; };
+		046EA8461E07CDF4009A21CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA8451E07CDF4009A21CD /* ViewController.swift */; };
+		046EA8491E07CDF4009A21CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046EA8471E07CDF4009A21CD /* Main.storyboard */; };
+		046EA84B1E07CDF4009A21CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046EA84A1E07CDF4009A21CD /* Assets.xcassets */; };
+		046EA84E1E07CDF4009A21CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046EA84C1E07CDF4009A21CD /* LaunchScreen.storyboard */; };
+		046EA8591E07CDF4009A21CD /* WorkoutClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA8581E07CDF4009A21CD /* WorkoutClubTests.swift */; };
+		046EA8641E07CDF4009A21CD /* WorkoutClubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA8631E07CDF4009A21CD /* WorkoutClubUITests.swift */; };
+		046EA8731E07CFEC009A21CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA8711E07CFEC009A21CD /* LoginViewController.swift */; };
+		046EA8741E07CFEC009A21CD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046EA8721E07CFEC009A21CD /* LoginViewController.xib */; };
+		046EA8771E07D117009A21CD /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA8751E07D117009A21CD /* SpeechViewController.swift */; };
+		046EA8781E07D117009A21CD /* SpeechViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046EA8761E07D117009A21CD /* SpeechViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		046EA8551E07CDF4009A21CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 046EA8381E07CDF3009A21CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 046EA83F1E07CDF4009A21CD;
+			remoteInfo = WorkoutClub;
+		};
+		046EA8601E07CDF4009A21CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 046EA8381E07CDF3009A21CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 046EA83F1E07CDF4009A21CD;
+			remoteInfo = WorkoutClub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		046EA8401E07CDF4009A21CD /* WorkoutClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046EA8431E07CDF4009A21CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		046EA8451E07CDF4009A21CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		046EA8481E07CDF4009A21CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		046EA84A1E07CDF4009A21CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046EA84D1E07CDF4009A21CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		046EA84F1E07CDF4009A21CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046EA8541E07CDF4009A21CD /* WorkoutClubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutClubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		046EA8581E07CDF4009A21CD /* WorkoutClubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutClubTests.swift; sourceTree = "<group>"; };
+		046EA85A1E07CDF4009A21CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046EA85F1E07CDF4009A21CD /* WorkoutClubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutClubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		046EA8631E07CDF4009A21CD /* WorkoutClubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutClubUITests.swift; sourceTree = "<group>"; };
+		046EA8651E07CDF4009A21CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046EA8711E07CFEC009A21CD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		046EA8721E07CFEC009A21CD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		046EA8751E07D117009A21CD /* SpeechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
+		046EA8761E07D117009A21CD /* SpeechViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046EA83D1E07CDF4009A21CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EA8511E07CDF4009A21CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EA85C1E07CDF4009A21CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		046EA8371E07CDF3009A21CD = {
+			isa = PBXGroup;
+			children = (
+				046EA8421E07CDF4009A21CD /* WorkoutClub */,
+				046EA8571E07CDF4009A21CD /* WorkoutClubTests */,
+				046EA8621E07CDF4009A21CD /* WorkoutClubUITests */,
+				046EA8411E07CDF4009A21CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		046EA8411E07CDF4009A21CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046EA8401E07CDF4009A21CD /* WorkoutClub.app */,
+				046EA8541E07CDF4009A21CD /* WorkoutClubTests.xctest */,
+				046EA85F1E07CDF4009A21CD /* WorkoutClubUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046EA8421E07CDF4009A21CD /* WorkoutClub */ = {
+			isa = PBXGroup;
+			children = (
+				046EA8431E07CDF4009A21CD /* AppDelegate.swift */,
+				046EA8451E07CDF4009A21CD /* ViewController.swift */,
+				046EA8471E07CDF4009A21CD /* Main.storyboard */,
+				046EA8711E07CFEC009A21CD /* LoginViewController.swift */,
+				046EA8721E07CFEC009A21CD /* LoginViewController.xib */,
+				046EA8751E07D117009A21CD /* SpeechViewController.swift */,
+				046EA8761E07D117009A21CD /* SpeechViewController.xib */,
+				046EA84A1E07CDF4009A21CD /* Assets.xcassets */,
+				046EA84C1E07CDF4009A21CD /* LaunchScreen.storyboard */,
+				046EA84F1E07CDF4009A21CD /* Info.plist */,
+			);
+			path = WorkoutClub;
+			sourceTree = "<group>";
+		};
+		046EA8571E07CDF4009A21CD /* WorkoutClubTests */ = {
+			isa = PBXGroup;
+			children = (
+				046EA8581E07CDF4009A21CD /* WorkoutClubTests.swift */,
+				046EA85A1E07CDF4009A21CD /* Info.plist */,
+			);
+			path = WorkoutClubTests;
+			sourceTree = "<group>";
+		};
+		046EA8621E07CDF4009A21CD /* WorkoutClubUITests */ = {
+			isa = PBXGroup;
+			children = (
+				046EA8631E07CDF4009A21CD /* WorkoutClubUITests.swift */,
+				046EA8651E07CDF4009A21CD /* Info.plist */,
+			);
+			path = WorkoutClubUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046EA83F1E07CDF4009A21CD /* WorkoutClub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046EA8681E07CDF4009A21CD /* Build configuration list for PBXNativeTarget "WorkoutClub" */;
+			buildPhases = (
+				046EA83C1E07CDF4009A21CD /* Sources */,
+				046EA83D1E07CDF4009A21CD /* Frameworks */,
+				046EA83E1E07CDF4009A21CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkoutClub;
+			productName = WorkoutClub;
+			productReference = 046EA8401E07CDF4009A21CD /* WorkoutClub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		046EA8531E07CDF4009A21CD /* WorkoutClubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046EA86B1E07CDF4009A21CD /* Build configuration list for PBXNativeTarget "WorkoutClubTests" */;
+			buildPhases = (
+				046EA8501E07CDF4009A21CD /* Sources */,
+				046EA8511E07CDF4009A21CD /* Frameworks */,
+				046EA8521E07CDF4009A21CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				046EA8561E07CDF4009A21CD /* PBXTargetDependency */,
+			);
+			name = WorkoutClubTests;
+			productName = WorkoutClubTests;
+			productReference = 046EA8541E07CDF4009A21CD /* WorkoutClubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		046EA85E1E07CDF4009A21CD /* WorkoutClubUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046EA86E1E07CDF4009A21CD /* Build configuration list for PBXNativeTarget "WorkoutClubUITests" */;
+			buildPhases = (
+				046EA85B1E07CDF4009A21CD /* Sources */,
+				046EA85C1E07CDF4009A21CD /* Frameworks */,
+				046EA85D1E07CDF4009A21CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				046EA8611E07CDF4009A21CD /* PBXTargetDependency */,
+			);
+			name = WorkoutClubUITests;
+			productName = WorkoutClubUITests;
+			productReference = 046EA85F1E07CDF4009A21CD /* WorkoutClubUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046EA8381E07CDF3009A21CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = hackntuios.minithon.teama;
+				TargetAttributes = {
+					046EA83F1E07CDF4009A21CD = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = M67FSQMGRG;
+						ProvisioningStyle = Automatic;
+					};
+					046EA8531E07CDF4009A21CD = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = M67FSQMGRG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 046EA83F1E07CDF4009A21CD;
+					};
+					046EA85E1E07CDF4009A21CD = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = M67FSQMGRG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 046EA83F1E07CDF4009A21CD;
+					};
+				};
+			};
+			buildConfigurationList = 046EA83B1E07CDF3009A21CD /* Build configuration list for PBXProject "WorkoutClub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 046EA8371E07CDF3009A21CD;
+			productRefGroup = 046EA8411E07CDF4009A21CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046EA83F1E07CDF4009A21CD /* WorkoutClub */,
+				046EA8531E07CDF4009A21CD /* WorkoutClubTests */,
+				046EA85E1E07CDF4009A21CD /* WorkoutClubUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046EA83E1E07CDF4009A21CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046EA8781E07D117009A21CD /* SpeechViewController.xib in Resources */,
+				046EA8741E07CFEC009A21CD /* LoginViewController.xib in Resources */,
+				046EA84E1E07CDF4009A21CD /* LaunchScreen.storyboard in Resources */,
+				046EA84B1E07CDF4009A21CD /* Assets.xcassets in Resources */,
+				046EA8491E07CDF4009A21CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EA8521E07CDF4009A21CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EA85D1E07CDF4009A21CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046EA83C1E07CDF4009A21CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046EA8771E07D117009A21CD /* SpeechViewController.swift in Sources */,
+				046EA8731E07CFEC009A21CD /* LoginViewController.swift in Sources */,
+				046EA8461E07CDF4009A21CD /* ViewController.swift in Sources */,
+				046EA8441E07CDF4009A21CD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EA8501E07CDF4009A21CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046EA8591E07CDF4009A21CD /* WorkoutClubTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EA85B1E07CDF4009A21CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046EA8641E07CDF4009A21CD /* WorkoutClubUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		046EA8561E07CDF4009A21CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 046EA83F1E07CDF4009A21CD /* WorkoutClub */;
+			targetProxy = 046EA8551E07CDF4009A21CD /* PBXContainerItemProxy */;
+		};
+		046EA8611E07CDF4009A21CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 046EA83F1E07CDF4009A21CD /* WorkoutClub */;
+			targetProxy = 046EA8601E07CDF4009A21CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		046EA8471E07CDF4009A21CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046EA8481E07CDF4009A21CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		046EA84C1E07CDF4009A21CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046EA84D1E07CDF4009A21CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		046EA8661E07CDF4009A21CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		046EA8671E07CDF4009A21CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		046EA8691E07CDF4009A21CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M67FSQMGRG;
+				INFOPLIST_FILE = WorkoutClub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.readbook.minithon.teama.WorkoutClub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		046EA86A1E07CDF4009A21CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M67FSQMGRG;
+				INFOPLIST_FILE = WorkoutClub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.readbook.minithon.teama.WorkoutClub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		046EA86C1E07CDF4009A21CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M67FSQMGRG;
+				INFOPLIST_FILE = WorkoutClubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.readbook.minithon.teama.WorkoutClubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutClub.app/WorkoutClub";
+			};
+			name = Debug;
+		};
+		046EA86D1E07CDF4009A21CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M67FSQMGRG;
+				INFOPLIST_FILE = WorkoutClubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.readbook.minithon.teama.WorkoutClubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutClub.app/WorkoutClub";
+			};
+			name = Release;
+		};
+		046EA86F1E07CDF4009A21CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = M67FSQMGRG;
+				INFOPLIST_FILE = WorkoutClubUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.readbook.minithon.teama.WorkoutClubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WorkoutClub;
+			};
+			name = Debug;
+		};
+		046EA8701E07CDF4009A21CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = M67FSQMGRG;
+				INFOPLIST_FILE = WorkoutClubUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.readbook.minithon.teama.WorkoutClubUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WorkoutClub;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046EA83B1E07CDF3009A21CD /* Build configuration list for PBXProject "WorkoutClub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046EA8661E07CDF4009A21CD /* Debug */,
+				046EA8671E07CDF4009A21CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046EA8681E07CDF4009A21CD /* Build configuration list for PBXNativeTarget "WorkoutClub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046EA8691E07CDF4009A21CD /* Debug */,
+				046EA86A1E07CDF4009A21CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		046EA86B1E07CDF4009A21CD /* Build configuration list for PBXNativeTarget "WorkoutClubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046EA86C1E07CDF4009A21CD /* Debug */,
+				046EA86D1E07CDF4009A21CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		046EA86E1E07CDF4009A21CD /* Build configuration list for PBXNativeTarget "WorkoutClubUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046EA86F1E07CDF4009A21CD /* Debug */,
+				046EA8701E07CDF4009A21CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 046EA8381E07CDF3009A21CD /* Project object */;
+}
