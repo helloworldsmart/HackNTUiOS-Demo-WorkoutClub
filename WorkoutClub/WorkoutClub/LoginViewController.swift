@@ -14,16 +14,33 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var skipBtn: UIButton!
     
+    var gradientLayer: CAGradientLayer!
+    var colorSets = [[CGColor]]()
+    var currentColorSet: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        createColorSets()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.handleTapGesture(gestureRecognizer:)))
+        
+        self.view.addGestureRecognizer(tapGestureRecognizer)
+        
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        //super.viewWillAppear(animated)
+        
+        //TODO :- GradientLayer會蓋住原本物件
+        createGradientLayer()
+        
         textDownConstraint.constant -= view.bounds.width
         skipBtn.alpha = 0.0
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +66,42 @@ class LoginViewController: UIViewController {
             self.view.layoutIfNeeded()
         }, completion: nil)
         
+    }
+    
+    //MARK:- gradientLayer
+    func createGradientLayer() {
+        
+        gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = self.view.bounds
+        
+        //gradientLayer.colors = [UIColor.red.cgColor, UIColor.yellow.cgColor]
+        gradientLayer.colors = colorSets[currentColorSet]
+        
+        self.view.layer.addSublayer(gradientLayer)
+    }
+    
+    func createColorSets() {
+        colorSets.append([UIColor.red.cgColor, UIColor.yellow.cgColor])
+        colorSets.append([UIColor.green.cgColor, UIColor.magenta.cgColor])
+        colorSets.append([UIColor.gray.cgColor, UIColor.lightGray.cgColor])
+        
+        currentColorSet = 0
+    }
+    
+    func handleTapGesture(gestureRecognizer: UITapGestureRecognizer) {
+        if currentColorSet < colorSets.count - 1 {
+            currentColorSet! += 1
+        } else {
+            currentColorSet = 0
+        }
+        
+        let colorChangeAnimation = CABasicAnimation(keyPath: "colors")
+        colorChangeAnimation.duration = 2.0
+        colorChangeAnimation.toValue = colorSets[currentColorSet]
+        colorChangeAnimation.fillMode = kCAFillModeForwards
+        colorChangeAnimation.isRemovedOnCompletion = false
+        gradientLayer.add(colorChangeAnimation, forKey: "colorChange")
     }
     
 

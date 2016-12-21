@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0459E4861E08F0C000471DF5 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E4851E08F0C000471DF5 /* DataModel.swift */; };
+		0459E48B1E090B1F00471DF5 /* DRHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E4891E090B1F00471DF5 /* DRHTableViewCell.swift */; };
+		0459E48C1E090B1F00471DF5 /* DRHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0459E48A1E090B1F00471DF5 /* DRHTableViewCell.xib */; };
+		0459E48E1E09151D00471DF5 /* DRHTableViewDataModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E48D1E09151D00471DF5 /* DRHTableViewDataModelItem.swift */; };
+		0459E4901E09199B00471DF5 /* DRHTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E48F1E09199B00471DF5 /* DRHTableViewController.swift */; };
+		0459E4921E09299900471DF5 /* DRHTableViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E4911E09299900471DF5 /* DRHTableViewDataModel.swift */; };
 		046EA8441E07CDF4009A21CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA8431E07CDF4009A21CD /* AppDelegate.swift */; };
 		046EA8461E07CDF4009A21CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EA8451E07CDF4009A21CD /* ViewController.swift */; };
 		046EA8491E07CDF4009A21CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046EA8471E07CDF4009A21CD /* Main.storyboard */; };
@@ -38,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0459E4851E08F0C000471DF5 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		0459E4891E090B1F00471DF5 /* DRHTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHTableViewCell.swift; sourceTree = "<group>"; };
+		0459E48A1E090B1F00471DF5 /* DRHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DRHTableViewCell.xib; sourceTree = "<group>"; };
+		0459E48D1E09151D00471DF5 /* DRHTableViewDataModelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHTableViewDataModelItem.swift; sourceTree = "<group>"; };
+		0459E48F1E09199B00471DF5 /* DRHTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHTableViewController.swift; sourceTree = "<group>"; };
+		0459E4911E09299900471DF5 /* DRHTableViewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHTableViewDataModel.swift; sourceTree = "<group>"; };
 		046EA8401E07CDF4009A21CD /* WorkoutClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046EA8431E07CDF4009A21CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046EA8451E07CDF4009A21CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +94,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0459E4871E08F0D600471DF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0459E4851E08F0C000471DF5 /* DataModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0459E4881E08FB3100471DF5 /* MVCTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				0459E4891E090B1F00471DF5 /* DRHTableViewCell.swift */,
+				0459E48A1E090B1F00471DF5 /* DRHTableViewCell.xib */,
+				0459E48D1E09151D00471DF5 /* DRHTableViewDataModelItem.swift */,
+				0459E48F1E09199B00471DF5 /* DRHTableViewController.swift */,
+				0459E4911E09299900471DF5 /* DRHTableViewDataModel.swift */,
+			);
+			name = MVCTutorial;
+			sourceTree = "<group>";
+		};
 		046EA8371E07CDF3009A21CD = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +137,8 @@
 		046EA8421E07CDF4009A21CD /* WorkoutClub */ = {
 			isa = PBXGroup;
 			children = (
+				0459E4881E08FB3100471DF5 /* MVCTutorial */,
+				0459E4871E08F0D600471DF5 /* Model */,
 				046EA8431E07CDF4009A21CD /* AppDelegate.swift */,
 				046EA8451E07CDF4009A21CD /* ViewController.swift */,
 				046EA8471E07CDF4009A21CD /* Main.storyboard */,
@@ -251,6 +285,7 @@
 				046EA8741E07CFEC009A21CD /* LoginViewController.xib in Resources */,
 				046EA84E1E07CDF4009A21CD /* LaunchScreen.storyboard in Resources */,
 				046EA84B1E07CDF4009A21CD /* Assets.xcassets in Resources */,
+				0459E48C1E090B1F00471DF5 /* DRHTableViewCell.xib in Resources */,
 				046EA8491E07CDF4009A21CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0459E4861E08F0C000471DF5 /* DataModel.swift in Sources */,
 				046EA8771E07D117009A21CD /* SpeechViewController.swift in Sources */,
+				0459E48B1E090B1F00471DF5 /* DRHTableViewCell.swift in Sources */,
+				0459E48E1E09151D00471DF5 /* DRHTableViewDataModelItem.swift in Sources */,
+				0459E4901E09199B00471DF5 /* DRHTableViewController.swift in Sources */,
 				046EA8731E07CFEC009A21CD /* LoginViewController.swift in Sources */,
 				046EA8461E07CDF4009A21CD /* ViewController.swift in Sources */,
+				0459E4921E09299900471DF5 /* DRHTableViewDataModel.swift in Sources */,
 				046EA8441E07CDF4009A21CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +570,7 @@
 				046EA86A1E07CDF4009A21CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		046EA86B1E07CDF4009A21CD /* Build configuration list for PBXNativeTarget "WorkoutClubTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +579,7 @@
 				046EA86D1E07CDF4009A21CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		046EA86E1E07CDF4009A21CD /* Build configuration list for PBXNativeTarget "WorkoutClubUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +588,7 @@
 				046EA8701E07CDF4009A21CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
