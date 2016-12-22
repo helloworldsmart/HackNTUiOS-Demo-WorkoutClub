@@ -10,6 +10,10 @@
 		044D38E61E0A7C2400F074BF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D38E51E0A7C2400F074BF /* MapKit.framework */; };
 		044D38E91E0A816600F074BF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38E81E0A816600F074BF /* CustomView.swift */; };
 		044D38EB1E0AB04D00F074BF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38EA1E0AB04D00F074BF /* CustomButton.swift */; };
+		044D38ED1E0BA52E00F074BF /* WorkoutDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38EC1E0BA52E00F074BF /* WorkoutDataModel.swift */; };
+		044D38EF1E0BA78000F074BF /* WorkoutClubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38EE1E0BA78000F074BF /* WorkoutClubTableViewCell.swift */; };
+		044D38F11E0BA7DA00F074BF /* WorkoutClubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38F01E0BA7DA00F074BF /* WorkoutClubTableViewController.swift */; };
+		044D38F31E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38F21E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift */; };
 		0459E4861E08F0C000471DF5 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E4851E08F0C000471DF5 /* DataModel.swift */; };
 		0459E48B1E090B1F00471DF5 /* DRHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E4891E090B1F00471DF5 /* DRHTableViewCell.swift */; };
 		0459E48C1E090B1F00471DF5 /* DRHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0459E48A1E090B1F00471DF5 /* DRHTableViewCell.xib */; };
@@ -51,6 +55,10 @@
 		044D38E51E0A7C2400F074BF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		044D38E81E0A816600F074BF /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		044D38EA1E0AB04D00F074BF /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		044D38EC1E0BA52E00F074BF /* WorkoutDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDataModel.swift; sourceTree = "<group>"; };
+		044D38EE1E0BA78000F074BF /* WorkoutClubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutClubTableViewCell.swift; sourceTree = "<group>"; };
+		044D38F01E0BA7DA00F074BF /* WorkoutClubTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutClubTableViewController.swift; sourceTree = "<group>"; };
+		044D38F21E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowWorkoutDetailViewController.swift; sourceTree = "<group>"; };
 		0459E4851E08F0C000471DF5 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		0459E4891E090B1F00471DF5 /* DRHTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHTableViewCell.swift; sourceTree = "<group>"; };
 		0459E48A1E090B1F00471DF5 /* DRHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DRHTableViewCell.xib; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 			children = (
 				044D38E81E0A816600F074BF /* CustomView.swift */,
 				044D38EA1E0AB04D00F074BF /* CustomButton.swift */,
+				044D38EE1E0BA78000F074BF /* WorkoutClubTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -123,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				0459E4851E08F0C000471DF5 /* DataModel.swift */,
+				044D38EC1E0BA52E00F074BF /* WorkoutDataModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -177,6 +187,8 @@
 				046EA84A1E07CDF4009A21CD /* Assets.xcassets */,
 				046EA84C1E07CDF4009A21CD /* LaunchScreen.storyboard */,
 				046EA84F1E07CDF4009A21CD /* Info.plist */,
+				044D38F01E0BA7DA00F074BF /* WorkoutClubTableViewController.swift */,
+				044D38F21E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift */,
 			);
 			path = WorkoutClub;
 			sourceTree = "<group>";
@@ -353,14 +365,18 @@
 				0459E4861E08F0C000471DF5 /* DataModel.swift in Sources */,
 				046EA8771E07D117009A21CD /* SpeechViewController.swift in Sources */,
 				0459E48B1E090B1F00471DF5 /* DRHTableViewCell.swift in Sources */,
+				044D38F31E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift in Sources */,
 				0459E48E1E09151D00471DF5 /* DRHTableViewDataModelItem.swift in Sources */,
 				0459E4901E09199B00471DF5 /* DRHTableViewController.swift in Sources */,
 				044D38E91E0A816600F074BF /* CustomView.swift in Sources */,
 				046EA8731E07CFEC009A21CD /* LoginViewController.swift in Sources */,
+				044D38F11E0BA7DA00F074BF /* WorkoutClubTableViewController.swift in Sources */,
 				044D38EB1E0AB04D00F074BF /* CustomButton.swift in Sources */,
 				046EA8461E07CDF4009A21CD /* ViewController.swift in Sources */,
+				044D38EF1E0BA78000F074BF /* WorkoutClubTableViewCell.swift in Sources */,
 				0459E4921E09299900471DF5 /* DRHTableViewDataModel.swift in Sources */,
 				046EA8441E07CDF4009A21CD /* AppDelegate.swift in Sources */,
+				044D38ED1E0BA52E00F074BF /* WorkoutDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
