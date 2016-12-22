@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044D38E61E0A7C2400F074BF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044D38E51E0A7C2400F074BF /* MapKit.framework */; };
+		044D38E91E0A816600F074BF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38E81E0A816600F074BF /* CustomView.swift */; };
+		044D38EB1E0AB04D00F074BF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38EA1E0AB04D00F074BF /* CustomButton.swift */; };
 		0459E4861E08F0C000471DF5 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E4851E08F0C000471DF5 /* DataModel.swift */; };
 		0459E48B1E090B1F00471DF5 /* DRHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E4891E090B1F00471DF5 /* DRHTableViewCell.swift */; };
 		0459E48C1E090B1F00471DF5 /* DRHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0459E48A1E090B1F00471DF5 /* DRHTableViewCell.xib */; };
@@ -44,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044D38DF1E0A785200F074BF /* WorkoutClub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorkoutClub.entitlements; sourceTree = "<group>"; };
+		044D38E51E0A7C2400F074BF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		044D38E81E0A816600F074BF /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		044D38EA1E0AB04D00F074BF /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0459E4851E08F0C000471DF5 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		0459E4891E090B1F00471DF5 /* DRHTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHTableViewCell.swift; sourceTree = "<group>"; };
 		0459E48A1E090B1F00471DF5 /* DRHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DRHTableViewCell.xib; sourceTree = "<group>"; };
@@ -74,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044D38E61E0A7C2400F074BF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +102,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044D38E01E0A785200F074BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				044D38E51E0A7C2400F074BF /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		044D38E71E0A812000F074BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				044D38E81E0A816600F074BF /* CustomView.swift */,
+				044D38EA1E0AB04D00F074BF /* CustomButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		0459E4871E08F0D600471DF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +146,7 @@
 				046EA8571E07CDF4009A21CD /* WorkoutClubTests */,
 				046EA8621E07CDF4009A21CD /* WorkoutClubUITests */,
 				046EA8411E07CDF4009A21CD /* Products */,
+				044D38E01E0A785200F074BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +163,8 @@
 		046EA8421E07CDF4009A21CD /* WorkoutClub */ = {
 			isa = PBXGroup;
 			children = (
+				044D38DF1E0A785200F074BF /* WorkoutClub.entitlements */,
+				044D38E71E0A812000F074BF /* View */,
 				0459E4881E08FB3100471DF5 /* MVCTutorial */,
 				0459E4871E08F0D600471DF5 /* Model */,
 				046EA8431E07CDF4009A21CD /* AppDelegate.swift */,
@@ -241,6 +269,17 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = M67FSQMGRG;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.Siri = {
+								enabled = 0;
+							};
+						};
 					};
 					046EA8531E07CDF4009A21CD = {
 						CreatedOnToolsVersion = 8.2;
@@ -316,7 +355,9 @@
 				0459E48B1E090B1F00471DF5 /* DRHTableViewCell.swift in Sources */,
 				0459E48E1E09151D00471DF5 /* DRHTableViewDataModelItem.swift in Sources */,
 				0459E4901E09199B00471DF5 /* DRHTableViewController.swift in Sources */,
+				044D38E91E0A816600F074BF /* CustomView.swift in Sources */,
 				046EA8731E07CFEC009A21CD /* LoginViewController.swift in Sources */,
+				044D38EB1E0AB04D00F074BF /* CustomButton.swift in Sources */,
 				046EA8461E07CDF4009A21CD /* ViewController.swift in Sources */,
 				0459E4921E09299900471DF5 /* DRHTableViewDataModel.swift in Sources */,
 				046EA8441E07CDF4009A21CD /* AppDelegate.swift in Sources */,

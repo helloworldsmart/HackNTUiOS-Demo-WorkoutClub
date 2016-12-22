@@ -22,11 +22,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        createColorSets()
+        //createColorSets()
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.handleTapGesture(gestureRecognizer:)))
-        
-        self.view.addGestureRecognizer(tapGestureRecognizer)
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.handleTapGesture(gestureRecognizer:)))
+//        
+//        self.view.addGestureRecognizer(tapGestureRecognizer)
         
 
     }
@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
         //super.viewWillAppear(animated)
         
         //TODO :- GradientLayer會蓋住原本物件
-        createGradientLayer()
+        //createGradientLayer()
         
         textDownConstraint.constant -= view.bounds.width
         skipBtn.alpha = 0.0

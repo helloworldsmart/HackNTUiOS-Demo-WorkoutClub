@@ -8,6 +8,7 @@
 
 import UIKit
 import Speech
+import CoreLocation
 
 class SpeechViewController: UIViewController {
     
@@ -24,7 +25,21 @@ class SpeechViewController: UIViewController {
     @IBOutlet weak var redBtn: UIButton!
     @IBOutlet weak var greenBtn: UIButton!
     
-
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var milesLabel: UILabel!
+    
+    @IBOutlet weak var startTimerBtn: UIButton!
+    @IBOutlet weak var stopTimerBtn: UIButton!
+    @IBOutlet weak var shareTimerBtn: UIButton!
+    
+    var zeroTime = TimeInterval()
+    var timer : Timer = Timer()
+    
+    let locationManager = CLLocationManager()
+    var startLocation: CLLocation!
+    var lastLocation: CLLocation!
+    var distanceTraveled = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +47,19 @@ class SpeechViewController: UIViewController {
         
         ///Speech
         microphoneButton.isEnabled = false
+
+        
+        locationManager.requestWhenInUseAuthorization();
+        
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        }
+        else {
+            print("Location service disabled");
+        }
+        
+        
 
     }
     
@@ -141,8 +169,19 @@ class SpeechViewController: UIViewController {
                     print("開始:")
                     self.greenBtn.setTitle("Green", for: .normal)
                     self.redBtn.setTitle("Red", for: .normal)
+                    //self.startTimerBtn.addTarget(self, action: #selector(SpeechViewController.startTimer), for: .touchUpInside)
+                    self.speechStartTimer()
+                    self.startTimerBtn.showsTouchWhenHighlighted = true
+                    self.startTimerBtn.alpha = 0.5
+                    self.shareTimerBtn.alpha = 0.5
                 case "暫停":
                     print("暫停")
+                case "停止":
+                    print("停止")
+                    self.speechStopTimer()
+                    self.stopTimerBtn.alpha = 0.5
+                    self.startTimerBtn.alpha = 1.0
+                    self.shareTimerBtn.alpha = 1.0
                 case "下下":
                     print("下下")
                 case "上上":
@@ -199,6 +238,64 @@ class SpeechViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func startTimer(_ sender: Any) {
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(SpeechViewController.updateTime), userInfo: nil, repeats: true)
+        zeroTime = Date.timeIntervalSinceReferenceDate
+        
+        distanceTraveled = 0.0
+        startLocation = nil
+        lastLocation = nil
+        
+        locationManager.startUpdatingLocation()
+    }
+    
+    func speechStartTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(SpeechViewController.updateTime), userInfo: nil, repeats: true)
+        zeroTime = Date.timeIntervalSinceReferenceDate
+        
+        distanceTraveled = 0.0
+        startLocation = nil
+        lastLocation = nil
+        
+        locationManager.startUpdatingLocation()
+    }
+    
+    @IBAction func stopTimer(_ sender: Any) {
+        timer.invalidate()
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func speechStopTimer() {
+        timer.invalidate()
+        locationManager.stopUpdatingLocation()
+    }
+    
+    @IBAction func share(_ sender: Any) {
+        
+    }
+    
+    func updateTime() {
+        let currentTime = Date.timeIntervalSinceReferenceDate
+        var timePassed: TimeInterval = currentTime - zeroTime
+        let minutes = UInt8(timePassed / 60.0)
+        timePassed -= (TimeInterval(minutes) * 60)
+        let seconds = UInt8(timePassed)
+        timePassed -= TimeInterval(seconds)
+        let millisecsX10 = UInt8(timePassed * 100)
+        
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        let strMSX10 = String(format: "%02d", millisecsX10)
+        
+        timerLabel.text = "\(strMinutes):\(strSeconds):\(strMSX10)"
+        
+        if timerLabel.text == "60:00:00" {
+            timer.invalidate()
+            locationManager.stopUpdatingLocation()
+        }
+    }
+    
 
 }
 
@@ -212,5 +309,23 @@ extension SpeechViewController: SFSpeechRecognizerDelegate {
         }
     }
     
+}
+
+extension SpeechViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if startLocation == nil {
+            startLocation = locations.first as CLLocation!
+        } else {
+            let lastDistance = lastLocation.distance(from: locations.last as CLLocation!)
+            distanceTraveled += lastDistance * 0.000621371
+            
+            let trimmedDistance = String(format: "%.2f", distanceTraveled)
+            
+            milesLabel.text = "\(trimmedDistance) Miles"
+        }
+        
+        lastLocation = locations.last as CLLocation!
+    }
 }
 
