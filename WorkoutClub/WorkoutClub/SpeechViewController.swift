@@ -10,7 +10,7 @@ import UIKit
 import Speech
 import CoreLocation
 
-class SpeechViewController: UIViewController {
+class SpeechViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var textView: UILabel!
     @IBOutlet weak var microphoneButton: UIButton!
@@ -40,6 +40,11 @@ class SpeechViewController: UIViewController {
     var lastLocation: CLLocation!
     var distanceTraveled = 0.0
     
+    var HICTs:[HICTDataModel] = [
+        HICTDataModel(image:"HandsomeBoy", HICT: "Jumping jacks", isDone: false),
+        HICTDataModel(image:"HandsomeBoy", HICT: "Wall sit", isDone: false)
+        ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,7 +52,8 @@ class SpeechViewController: UIViewController {
         
         ///Speech
         microphoneButton.isEnabled = false
-
+        microphoneButton.layer.cornerRadius = 30
+        microphoneButton.layer.masksToBounds = true
         
         locationManager.requestWhenInUseAuthorization();
         
@@ -327,5 +333,28 @@ extension SpeechViewController: CLLocationManagerDelegate {
         
         lastLocation = locations.last as CLLocation!
     }
+}
+
+extension SpeechViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return HICTs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "DoneCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! HICTTableViewCell
+        
+        // Configure the cell...
+        cell.thumbnailImageView.image = UIImage(named: HICTs[indexPath.row].image)
+        cell.nameLabel.text = HICTs[indexPath.row].HICT
+        //cell.accessoryType = HICTs[indexPath.row].isDone ? .checkmark : .none
+        
+        return cell
+    }
+}
+
+extension SpeechViewController: UITableViewDelegate {
+    
 }
 

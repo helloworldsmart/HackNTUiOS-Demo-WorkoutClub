@@ -156,14 +156,14 @@ class WorkoutClubTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showWorkoutDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let destinationController = segue.destination as! ShowWorkoutDetailViewController
+                let destinationController = segue.destination as! ShowWorkoutDetailViewControler
                 
                 destinationController.workoutDataModel = workoutDataModels[indexPath.row]
             }
         }
     }
  
-//    @IBAction func unwindToHomeScreen(_ segue:UIStoryboardSegue) {
-//    }
+    @IBAction func unwindToHomeScreen(_ segue:UIStoryboardSegue) {
+    }
     
 }

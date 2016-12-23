@@ -14,6 +14,9 @@
 		044D38EF1E0BA78000F074BF /* WorkoutClubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38EE1E0BA78000F074BF /* WorkoutClubTableViewCell.swift */; };
 		044D38F11E0BA7DA00F074BF /* WorkoutClubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38F01E0BA7DA00F074BF /* WorkoutClubTableViewController.swift */; };
 		044D38F31E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38F21E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift */; };
+		044D38F51E0CCCB600F074BF /* ShowWorkoutDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38F41E0CCCB600F074BF /* ShowWorkoutDetailTableViewCell.swift */; };
+		044D38F71E0D06AB00F074BF /* HICTDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38F61E0D06AB00F074BF /* HICTDataModel.swift */; };
+		044D38F91E0D077F00F074BF /* HICTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38F81E0D077F00F074BF /* HICTTableViewCell.swift */; };
 		0459E4861E08F0C000471DF5 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E4851E08F0C000471DF5 /* DataModel.swift */; };
 		0459E48B1E090B1F00471DF5 /* DRHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459E4891E090B1F00471DF5 /* DRHTableViewCell.swift */; };
 		0459E48C1E090B1F00471DF5 /* DRHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0459E48A1E090B1F00471DF5 /* DRHTableViewCell.xib */; };
@@ -59,6 +62,9 @@
 		044D38EE1E0BA78000F074BF /* WorkoutClubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutClubTableViewCell.swift; sourceTree = "<group>"; };
 		044D38F01E0BA7DA00F074BF /* WorkoutClubTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutClubTableViewController.swift; sourceTree = "<group>"; };
 		044D38F21E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowWorkoutDetailViewController.swift; sourceTree = "<group>"; };
+		044D38F41E0CCCB600F074BF /* ShowWorkoutDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowWorkoutDetailTableViewCell.swift; sourceTree = "<group>"; };
+		044D38F61E0D06AB00F074BF /* HICTDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HICTDataModel.swift; sourceTree = "<group>"; };
+		044D38F81E0D077F00F074BF /* HICTTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HICTTableViewCell.swift; sourceTree = "<group>"; };
 		0459E4851E08F0C000471DF5 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		0459E4891E090B1F00471DF5 /* DRHTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHTableViewCell.swift; sourceTree = "<group>"; };
 		0459E48A1E090B1F00471DF5 /* DRHTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DRHTableViewCell.xib; sourceTree = "<group>"; };
@@ -124,6 +130,8 @@
 				044D38E81E0A816600F074BF /* CustomView.swift */,
 				044D38EA1E0AB04D00F074BF /* CustomButton.swift */,
 				044D38EE1E0BA78000F074BF /* WorkoutClubTableViewCell.swift */,
+				044D38F41E0CCCB600F074BF /* ShowWorkoutDetailTableViewCell.swift */,
+				044D38F81E0D077F00F074BF /* HICTTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 			children = (
 				0459E4851E08F0C000471DF5 /* DataModel.swift */,
 				044D38EC1E0BA52E00F074BF /* WorkoutDataModel.swift */,
+				044D38F61E0D06AB00F074BF /* HICTDataModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -363,14 +372,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0459E4861E08F0C000471DF5 /* DataModel.swift in Sources */,
+				044D38F51E0CCCB600F074BF /* ShowWorkoutDetailTableViewCell.swift in Sources */,
 				046EA8771E07D117009A21CD /* SpeechViewController.swift in Sources */,
 				0459E48B1E090B1F00471DF5 /* DRHTableViewCell.swift in Sources */,
 				044D38F31E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift in Sources */,
+				044D38F71E0D06AB00F074BF /* HICTDataModel.swift in Sources */,
 				0459E48E1E09151D00471DF5 /* DRHTableViewDataModelItem.swift in Sources */,
 				0459E4901E09199B00471DF5 /* DRHTableViewController.swift in Sources */,
 				044D38E91E0A816600F074BF /* CustomView.swift in Sources */,
 				046EA8731E07CFEC009A21CD /* LoginViewController.swift in Sources */,
 				044D38F11E0BA7DA00F074BF /* WorkoutClubTableViewController.swift in Sources */,
+				044D38F91E0D077F00F074BF /* HICTTableViewCell.swift in Sources */,
 				044D38EB1E0AB04D00F074BF /* CustomButton.swift in Sources */,
 				046EA8461E07CDF4009A21CD /* ViewController.swift in Sources */,
 				044D38EF1E0BA78000F074BF /* WorkoutClubTableViewCell.swift in Sources */,

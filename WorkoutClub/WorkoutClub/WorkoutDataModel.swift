@@ -21,6 +21,7 @@ class WorkoutDataModel {
     var pounds = ""
     var numberOfGroups = ""
     
+    
     init(date:String, timer:String, location:String, miles:String, image:String, isOutside:Bool) {
         self.date = date
         self.timer = timer
