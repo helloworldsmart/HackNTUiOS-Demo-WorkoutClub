@@ -116,6 +116,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043795981E0E112600512560 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				046EA8451E07CDF4009A21CD /* ViewController.swift */,
+				046EA8711E07CFEC009A21CD /* LoginViewController.swift */,
+				046EA8751E07D117009A21CD /* SpeechViewController.swift */,
+				044D38F01E0BA7DA00F074BF /* WorkoutClubTableViewController.swift */,
+				044D38F21E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		044D38E01E0A785200F074BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +144,8 @@
 				044D38EE1E0BA78000F074BF /* WorkoutClubTableViewCell.swift */,
 				044D38F41E0CCCB600F074BF /* ShowWorkoutDetailTableViewCell.swift */,
 				044D38F81E0D077F00F074BF /* HICTTableViewCell.swift */,
+				046EA8721E07CFEC009A21CD /* LoginViewController.xib */,
+				046EA8761E07D117009A21CD /* SpeechViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -186,18 +200,12 @@
 				044D38E71E0A812000F074BF /* View */,
 				0459E4881E08FB3100471DF5 /* MVCTutorial */,
 				0459E4871E08F0D600471DF5 /* Model */,
+				043795981E0E112600512560 /* Controller */,
 				046EA8431E07CDF4009A21CD /* AppDelegate.swift */,
-				046EA8451E07CDF4009A21CD /* ViewController.swift */,
 				046EA8471E07CDF4009A21CD /* Main.storyboard */,
-				046EA8711E07CFEC009A21CD /* LoginViewController.swift */,
-				046EA8721E07CFEC009A21CD /* LoginViewController.xib */,
-				046EA8751E07D117009A21CD /* SpeechViewController.swift */,
-				046EA8761E07D117009A21CD /* SpeechViewController.xib */,
 				046EA84A1E07CDF4009A21CD /* Assets.xcassets */,
 				046EA84C1E07CDF4009A21CD /* LaunchScreen.storyboard */,
 				046EA84F1E07CDF4009A21CD /* Info.plist */,
-				044D38F01E0BA7DA00F074BF /* WorkoutClubTableViewController.swift */,
-				044D38F21E0BC0B500F074BF /* ShowWorkoutDetailViewController.swift */,
 			);
 			path = WorkoutClub;
 			sourceTree = "<group>";

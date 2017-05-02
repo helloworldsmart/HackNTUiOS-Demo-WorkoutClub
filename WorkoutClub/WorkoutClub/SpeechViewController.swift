@@ -12,8 +12,10 @@ import CoreLocation
 
 class SpeechViewController: UIViewController, UINavigationControllerDelegate {
     
-    @IBOutlet weak var textView: UILabel!
+    //@IBOutlet weak var textView: UILabel!
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var microphoneButton: UIButton!
+    
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "zh-TW"))
     // en-US
@@ -40,10 +42,15 @@ class SpeechViewController: UIViewController, UINavigationControllerDelegate {
     var lastLocation: CLLocation!
     var distanceTraveled = 0.0
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var HICTs:[HICTDataModel] = [
-        HICTDataModel(image:"HandsomeBoy", HICT: "Jumping jacks", isDone: false),
-        HICTDataModel(image:"HandsomeBoy", HICT: "Wall sit", isDone: false)
+        HICTDataModel(image:"JumpingJacks", HICT: "開合跳", isDone: false)
         ]
+    
+    var HICTname:String = ""
+    var deleteTableViewNumber = 0
+    var HICTList = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +72,6 @@ class SpeechViewController: UIViewController, UINavigationControllerDelegate {
             print("Location service disabled");
         }
         
-        
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -160,6 +165,8 @@ class SpeechViewController: UIViewController, UINavigationControllerDelegate {
                 
                 let subString2 = saySomething[saySomething.index(saySomething.endIndex, offsetBy: -2)..<saySomething.endIndex]
                 
+                //TODO: 傳 enum 判斷 sport type, 開合跳 
+                
                 switch subString2 {
                 case "測試":
                     print("Good")
@@ -190,8 +197,10 @@ class SpeechViewController: UIViewController, UINavigationControllerDelegate {
                     self.shareTimerBtn.alpha = 1.0
                 case "下下":
                     print("下下")
+                    self.deleteTableViewNumber += 1
                 case "上上":
                     print("上上")
+                    self.addBtnAction()
                 case "關閉":
                     print("關閉")
                     //                        isFinal = true
@@ -202,6 +211,30 @@ class SpeechViewController: UIViewController, UINavigationControllerDelegate {
                     //                        self.recognitionTast = nil
                     //
                 //                        self.microphoneButton.isEnabled = true
+                case "合跳":
+                    print("開合跳")
+                    self.HICTname = "開合跳"
+                    self.addBtnAction()
+                case "空椅":
+                    print("坐太空椅")
+                    self.HICTname = "坐太空椅"
+                    self.addWallSitAction()
+                case "伏地挺身":
+                    print("伏地挺身")
+                    self.HICTname = "伏地挺身"
+                    self.addPushUpAction()
+                case "捲腹":
+                    print("捲腹")
+                    self.HICTname = "捲腹"
+                    self.addAbdominalCrunchAction()
+                case "登階":
+                    print("登階")
+                    self.HICTname = "登階"
+                    self.addStepUpOntoChairAction()
+                case "OK":
+                    self.HICTList += 1
+                    self.addHICTAction()
+                    
                 default:
                     print("Error")
                 }
@@ -278,7 +311,8 @@ class SpeechViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func share(_ sender: Any) {
-        
+        print("test")
+        red()
     }
     
     func updateTime() {
@@ -302,6 +336,82 @@ class SpeechViewController: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    // 按下新增按鈕時執行動作的方法
+    func addBtnAction() {
+        print("新增一筆資料")
+        //info.insert("new row", at: 0)
+        HICTs.insert(HICTDataModel(image:"JumpingJacks", HICT: HICTname, isDone: false), at: 0)
+        // 新增 cell 在第一筆 row
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+        tableView.endUpdates()
+    }
+    
+    func addWallSitAction() {
+        HICTs.insert(HICTDataModel(image:"WallSit", HICT: HICTname, isDone: false), at: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+        tableView.endUpdates()
+    }
+    
+    func addPushUpAction() {
+        HICTs.insert(HICTDataModel(image:"Push-up", HICT: HICTname, isDone: false), at: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+        tableView.endUpdates()
+    }
+    
+    func addAbdominalCrunchAction() {
+        HICTs.insert(HICTDataModel(image:"AbdominalCrunch", HICT: HICTname, isDone: false), at: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+        tableView.endUpdates()
+    }
+    
+    func addStepUpOntoChairAction() {
+        HICTs.insert(HICTDataModel(image:"Step-upOntoChair", HICT: HICTname, isDone: false), at: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+        tableView.endUpdates()
+    }
+    
+    func addHICTAction() {
+        print("新增一筆資料")
+        switch HICTList {
+        case 1:
+            HICTs.insert(HICTDataModel(image:"WallSit", HICT: "坐太空椅", isDone: false), at: 0)
+        case 2:
+            HICTs.insert(HICTDataModel(image:"Push-up", HICT: "伏地挺身", isDone: false), at: 0)
+        case 3:
+            HICTs.insert(HICTDataModel(image:"AbdominalCrunch", HICT: "捲腹", isDone: false), at: 0)
+        case 4:
+            HICTs.insert(HICTDataModel(image:"Step-upOntoChair", HICT: "登階", isDone: false), at: 0)
+        case 5:
+            HICTs.insert(HICTDataModel(image:"Squat", HICT: "深蹲", isDone: false), at: 0)
+        case 6:
+            HICTs.insert(HICTDataModel(image:"TricepsDipOnChair", HICT: "三頭肌撐體", isDone: false), at: 0)
+        case 7:
+            HICTs.insert(HICTDataModel(image:"Plank", HICT: "棒式", isDone: false), at: 0)
+        case 8:
+            HICTs.insert(HICTDataModel(image:"HighKneesRunningInPlace", HICT: "原地高抬膝", isDone: false), at: 0)
+        case 9:
+            HICTs.insert(HICTDataModel(image:"Lunge", HICT: "弓步", isDone: false), at: 0)
+        case 10:
+            HICTs.insert(HICTDataModel(image:"Push-upAndRotation", HICT: "T型伏地挺身", isDone: false), at: 0)
+        case 11:
+            HICTs.insert(HICTDataModel(image:"SidePlank", HICT: "側棒式", isDone: false), at: 0)
+        case 12:
+            HICTs.insert(HICTDataModel(image:"HandsomeBoy", HICT: "You got it", isDone: false), at: 0)
+            //dismiss(animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        default:
+            print("error")
+            HICTList -= 1
+        }
+        // 新增 cell 在第一筆 row
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+        tableView.endUpdates()
+    }
 
 }
 
@@ -355,6 +465,129 @@ extension SpeechViewController: UITableViewDataSource {
 }
 
 extension SpeechViewController: UITableViewDelegate {
+    // MARK: - Table view delegate
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            HICTs.remove(at: indexPath.row)
+            print(indexPath.row)
+        }
+        
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        print(indexPath)
+//        if deleteTableViewNumber == 1 {
+//            // Delete the row from the data source
+//            if editingStyle == .delete {
+//                // Delete the row from the data source
+//                HICTs.remove(at: 1)
+//            }
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        }
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        // Social Sharing Button
+        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share", handler: { (action, indexPath) -> Void in
+            
+            let defaultText = "Just checking in at " + self.HICTs[indexPath.row].HICT
+            if let imageToShare = UIImage(named: self.HICTs[indexPath.row].image) {
+                let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                self.present(activityController, animated: true, completion: nil)
+            }
+        })
+        
+        // Delete button
+        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete",handler: { (action, indexPath) -> Void in
+            
+            // Delete the row from the data source
+            self.HICTs.remove(at: indexPath.row)
+            print(indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            print(indexPath)
+        })
+        
+//        if deleteTableViewNumber == 1 {
+//            // Delete the row from the data source
+//            self.HICTs.remove(at: 1)
+//            
+//            self.tableView.deleteRows(at: [indexPath], with: .fade)
+//
+//        }
+        
+        // Set the button color
+        shareAction.backgroundColor = UIColor(red: 28.0/255.0, green: 165.0/255.0, blue: 253.0/255.0, alpha: 1.0)
+        deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        
+        return [deleteAction, shareAction]
+    }
+    
+    
+    //TODO:- TEST
+    func red() {
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+            
+            if editingStyle == .delete {
+                // Delete the row from the data source
+                HICTs.remove(at: 0)
+            }
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            //        if deleteTableViewNumber == 1 {
+            //            // Delete the row from the data source
+            //            if editingStyle == .delete {
+            //                // Delete the row from the data source
+            //                HICTs.remove(at: 1)
+            //            }
+            //            tableView.deleteRows(at: [indexPath], with: .fade)
+            //        }
+        }
+        
+        func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+            
+            // Social Sharing Button
+            let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share", handler: { (action, indexPath) -> Void in
+                
+                let defaultText = "Just checking in at " + self.HICTs[indexPath.row].HICT
+                if let imageToShare = UIImage(named: self.HICTs[indexPath.row].image) {
+                    let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                    self.present(activityController, animated: true, completion: nil)
+                }
+            })
+            
+            // Delete button
+            let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete",handler: { (action, indexPath) -> Void in
+                
+                // Delete the row from the data source
+                //indexPath = 1
+                self.HICTs.remove(at: 1)
+                
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+            })
+            
+            //        if deleteTableViewNumber == 1 {
+            //            // Delete the row from the data source
+            //            self.HICTs.remove(at: 1)
+            //
+            //            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            //
+            //        }
+            
+            // Set the button color
+            shareAction.backgroundColor = UIColor(red: 28.0/255.0, green: 165.0/255.0, blue: 253.0/255.0, alpha: 1.0)
+            deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+            
+            return [deleteAction, shareAction]
+        }
+
+        
+    }
+
+
 }
 
